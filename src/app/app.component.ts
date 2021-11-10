@@ -1,23 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { PhotoService } from './photos/photo/photo.services';
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
 
-  photos: any[] = [];  
-
-//destinado a ingecao de dependecias 
-  constructor(private photoService: PhotoService){}
   
-//detinado a incializacao 
-  ngOnInit(): void {
-    this.photoService
-    .lsitFromUser('flavio')
-    .subscribe(photos => this.photos = photos);
-  }
   
 
 
