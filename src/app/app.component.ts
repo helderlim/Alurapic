@@ -7,13 +7,15 @@ import { PhotoService } from './photos/photo/photo.services';
 })
 export class AppComponent {
 
-  photos: object[] = [];  
+  photos: any[] = [];  
+
 
   constructor(photoService: PhotoService){
 
     photoService
     .lsitFromUser('flavio')
     .subscribe(photos => this.photos = photos);
+
   }
 
 
