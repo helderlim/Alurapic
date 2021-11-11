@@ -4,17 +4,17 @@ import { CommonModule } from '@angular/common';
 
 import { PhotoComponent } from "./photo/photo.component";
 import { PhotoListComponent } from './photo-list/photo-list.component';
+import { PhotoFormComponent } from './photo-form/photo-form.component';
 
 
 @NgModule({
     declarations: [ 
         PhotoComponent, 
-        PhotoListComponent 
+        PhotoListComponent, 
+        PhotoFormComponent 
     ],
     imports: [
         HttpClientModule,
-        //boa pratica sempre importar no modulo o CommonModulo para tornar disponivel as diretivas do Angular
-        //nunca importe BrowserModule a nao ser no app.module o principal 
         CommonModule
     ] 
 })
